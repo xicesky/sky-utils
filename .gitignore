@@ -1,0 +1,14 @@
+
+# Ignore the usual temporaries / backups / swapfiles...
+*.sw[pon]
+*.bak
+.DS_Store
+
+# Haskell / cabal locals
+*.hi
+.cabal-sandbox
+cabal.sandbox.config
+
+# Stack locals
+.stack-work
+
