@@ -22,8 +22,8 @@ library
   ghc-options:
     -fwarn-tabs
     -fwarn-missing-signatures
-    -fwarn-name-shadowing
     -fwarn-incomplete-patterns  
+    -- -fwarn-name-shadowing  -- Happens too often and is usually ok
     -- -fwarn-unused-imports  -- Generates a load of warnings in main
   build-depends:
       base >= 4.7 && < 5
