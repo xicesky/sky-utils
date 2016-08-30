@@ -1,6 +1,9 @@
 
 module Sky.Util (
     module Sky.Util.Container
+  , Identity
+  , runIdentity
   ) where
 
-import Sky.Util.Container
+import           Data.Functor.Identity (Identity, runIdentity)
+import           Sky.Util.Container

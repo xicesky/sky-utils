@@ -29,7 +29,20 @@ module Sky.Util.Container (
 --------------------------------------------------------------------------------------------------
 
 {- TODO:
-    - This resembles the stuff from https://hackage.haskell.org/package/collections-api-1.0.0.0/docs/Data-Collections.html
+    - This resembles the stuff from:
+        https://hackage.haskell.org/package/collections-api-1.0.0.0/docs/Data-Collections.html
+    - Think about using type families
+    - This module needs a lot of cleanup, since most of the stuff is fixed in base in the meantime:
+        - Every data structure should be a Monoid, so we get mempty, ...
+            - Singleton + mappend = fromList?
+        - We have Foldable which includes toList, length, null, elem
+        - Traverseable
+        - IsList contains the item type (k, v) and toList, fromList
+        - What class only contains "pure" but not "fapply" (aka <*>) ?
+
+    - Definitely not in base are
+        - mapWithKey, foldrWithKey, traverseWithKey ...
+
 -}
 
 import           Prelude             (Bool (..), Eq (..), Int, Ord (..), String,
