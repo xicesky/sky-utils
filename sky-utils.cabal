@@ -1,6 +1,6 @@
 name:                sky-utils
 version:             0.1.0.0
-synopsis:            Initial project template from stack
+synopsis:            Utilities library for my projects
 description:         Please see README.md
 homepage:            https://github.com/xicesky/sky-utils#readme
 license:             BSD3
