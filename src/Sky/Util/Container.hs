@@ -1,5 +1,6 @@
 
 {-# LANGUAGE ScopedTypeVariables    #-}
+{-# LANGUAGE InstanceSigs           #-}
 {-# LANGUAGE FlexibleContexts       #-}
 {-# LANGUAGE FlexibleInstances      #-}
 {-# LANGUAGE MultiParamTypeClasses  #-}
