@@ -12,6 +12,7 @@ module Sky.Util.Container
     ,   Constructible(..)
     ,   Collapseable(..)
     ,   Intersectable(..)
+    ,   Diffable(..)
     ,   Container(..)
     ,   HasLookup(..)
     ,   MapLike(..)
