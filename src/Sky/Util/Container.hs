@@ -84,7 +84,7 @@ type HashMap k v = HashMap.HashMap k v
 class BaseContainer c where
     -- ElemT is not the value type, but the type a container would "toList" to.
     -- E.g.: In a map "k -> v" this is (k,v).
-    type ElemT c :: *       
+    type ElemT c :: *
 
 class (BaseContainer c) => Constructible c where
     empty :: c
@@ -155,7 +155,7 @@ class (HasLookup m, Collapseable m, (KeyT m, ValueT m) ~ ElemT m) => MapLike m w
     values :: m -> [ValueT m]
     values m = Prelude.map snd (elements m)
     --mapInsert k v m = insert (k,v) m
-    hasKey :: m -> (KeyT m) -> Bool
+    hasKey :: m -> KeyT m -> Bool
     hasKey m k = isMemberOf k m
 
 class MapFoldable m where
@@ -327,7 +327,7 @@ instance (Ord k) => Constructible (TreeMap k v) where
     fromList = DataMap.fromList
 
 instance Collapseable (TreeMap k v) where
-    c_foldMap f m = DataMap.foldWithKey f' mempty m where  -- Handle map as collection of (k,v) pairs
+    c_foldMap f m = DataMap.foldrWithKey f' mempty m where  -- Handle map as collection of (k,v) pairs
         f' k v a = f (k,v) `mappend` a
     elements = DataMap.toList
     size = DataMap.size
