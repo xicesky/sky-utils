@@ -23,6 +23,11 @@ dependencies:
 - containers
 - hashable
 - unordered-containers
+- mono-traversable
+- subcategories
+
+default-extensions:
+  - NoImplicitPrelude
 
 library:
   source-dirs: src
@@ -43,4 +48,7 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - sky-utils
+    - QuickCheck
+    - hspec
+    - quickcheck-instances
 
