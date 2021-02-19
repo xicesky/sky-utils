@@ -14,7 +14,6 @@
 module Container.Properties where
 
 import Prelude
-import Container.Container
 
 import Test.Hspec
 import Test.Hspec.QuickCheck
@@ -22,6 +21,9 @@ import Test.QuickCheck
 import Test.QuickCheck.Instances ()
 
 import Control.Applicative
+import Control.Subcategory.Functor (Dom)
+
+import Container.Container
 
 {-# ANN module "HLint: ignore Use newtype instead of data" #-}
 {-# ANN module "HLint: ignore Use camelCase" #-}

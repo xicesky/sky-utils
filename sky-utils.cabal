@@ -29,6 +29,7 @@ library
       Container
       Container.Constrained
       Container.Container
+      Container.Container2
       Container.Mono
       Sky.Util
       Sky.Util.Container
