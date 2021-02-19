@@ -1,3 +1,6 @@
+# A directory for you to put local stuff in
+/local/
+
 # Ignore stack build dir
 .stack-work/
 

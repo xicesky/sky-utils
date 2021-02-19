@@ -24,6 +24,9 @@ dependencies:
 - hashable
 - unordered-containers
 
+default-extensions:
+  - NoImplicitPrelude
+
 library:
   source-dirs: src
   ghc-options:
@@ -43,4 +46,7 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - sky-utils
+    - QuickCheck
+    - hspec
+    - quickcheck-instances
 
