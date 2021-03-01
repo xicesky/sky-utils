@@ -12,6 +12,7 @@ import Prelude
     ,   fromIntegral, otherwise
     )
 import Data.Maybe (Maybe, fromJust)
+import Data.Function (flip)
 
 import Container.ITraversable
 
@@ -23,10 +24,10 @@ infixl 4 <$.>
 
 -- | Infix operator for @lookup@
 infixl 9 !?
-(!?) :: ITraversable c => IndexT c -> c -> Maybe (ValueT c)
-(!?) = lookup
+(!?) :: ITraversable c => c -> IndexT c -> Maybe (ValueT c)
+(!?) = flip lookup
 
 -- | Unsafe version of (!?)
 infixl 9 !!
-(!!) :: ITraversable c => IndexT c -> c -> ValueT c
-(!!) = (fromJust .) . lookup
+(!!) :: ITraversable c => c -> IndexT c -> ValueT c
+(!!) = (fromJust .) . flip lookup

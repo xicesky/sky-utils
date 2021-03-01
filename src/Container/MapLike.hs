@@ -69,7 +69,7 @@ class (MonoidalC c, (IndexT c, ValueT c) ~ ElemT c) => MapLike c where
     -}
 
     -- * Derived functions
-    -- | You might want to override some of them for increased performace
+    -- You might want to override some of them for increased performace
 
     alter :: (Maybe (ValueT c) -> Maybe (ValueT c)) -> IndexT c -> c -> c
     alter f = (runIdentity .) . alterF (Identity . f)

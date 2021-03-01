@@ -72,7 +72,7 @@ class (MonoidalC c, IndexT c ~ ElemT c) => SetLike c where
     {-# MINIMAL alterSetF, deriveValue #-}
 
     -- * Derived functions
-    -- | You might want to override some of them for increased performace
+    -- You might want to override some of them for increased performace
 
     alterSet :: (Bool -> Bool) -> IndexT c -> c -> c
     alterSet f = (runIdentity .) . alterSetF (Identity . f)

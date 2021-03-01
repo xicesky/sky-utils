@@ -105,7 +105,7 @@ class (Monoid c, ITraversable c) => MonoidalC c where
     {-# MINIMAL csingleton | cinsert #-}
 
     -- * Derived functions
-    -- | You might want to override some of them for increased performace
+    -- You might want to override some of them for increased performace
 
     -- TODO: generalize
     -- TODO: guarantee: fromList . listElements = id

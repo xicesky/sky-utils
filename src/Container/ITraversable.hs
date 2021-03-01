@@ -108,7 +108,7 @@ class ITraversable c where
     {-# MINIMAL traverseIndexed, mkElement, unElement #-}
 
     -- * Derived functions
-    -- | You might want to override some of them for increased performace
+    -- You might want to override some of them for increased performace
 
     -- | Monomorphic traversal without indices
     otraverse :: Applicative f => (ValueT c -> f (ValueT c)) -> c -> f c
